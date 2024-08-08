@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Tamanho de fonte inicial */
+            
+ 
+    height: 100vh;
+    margin: 0;
+ 
+    transition: font-size 0.3s ease;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Hollow Knight</h1>
+        <nav>
+            <ul>
+                <a href="index.html">
+                    <li>Página inicial</li>
+                </a>
+                <a href="boss.html" rel="next">
+                    <li>Bosses</li>
+                </a>
+                <a href="formulario.html">
+                    <li>Formulário</li>
+                </a>
+            </ul>
+        </nav>
+        <img style="border: 2px solid
+        #ffffff; border-radius: 100%;" id="knight" src="imagens/knight.png" alt="protagonista" />
+    </header>
+    <main>
+        <div class="controls">
+            <button id="decrease-font">Diminuir Fonte</button>
+            <button id="increase-font">Aumentar Fonte</button>
+        </div>
+        <div class="container">
+            <h2>Formulário de Cadastro</h2>
+            <div class="container">
+                <button id="invertColorsBtn">Inverter Cores</button>
+            </div>
+            <br />
+            <div class="container">
+                <h1>Contador de Caracteres</h1>
+                <textarea id="textArea" maxlength="200" placeholder="Digite aqui..."></textarea>
+                <div id="charCount">Caracteres: 0/200</div>
+                <div id="message" class="hidden">Você atingiu o limite máximo de caracteres!</div>
+            </div>
+            <br/>
+            <form id="signupForm" onsubmit="return validateForm()">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="age">Idade:</label>
+                <input type="number" id="age" name="age" required>
+                <p id="ageMessage"></p>
+
+                <label for="state">Estado:</label>
+                <select id="state" name="state">
+                    <option value="">Selecione um estado</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="ES">Espírito Santo</option>
+                </select>
+
+                <label for="city">Cidade:</label>
+                <select id="city" name="city" disabled>
+                    <option value="">Selecione uma cidade</option>
+                </select>
+
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <p id="passwordMessage"></p>
+
+                <label for="confirmPassword">Confirme a Senha:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <p id="confirmPasswordMessage"></p>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+            <p id="formMessage"></p>
+        </div>
+    </main>
+
+
+    <footer>
+        <p>Meios de contato: (31) 99999-999 &copy;</p>
+    </footer>
+    <script src="formulario.js"></script>
+</body>
+
+</html>

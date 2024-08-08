@@ -1,0 +1,14 @@
+{
+  "name": "sitehollowknight",
+  "version": "1.0.0",
+  "description": "siteHKcomTesteUnit",
+  "main": "formulario.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Eu",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
